@@ -21,9 +21,9 @@ class Home extends React.Component {
   render() {
     return (
       <div className={styles.wrapper}>
-       <p className={styles.h3Text}> Welcome to Gimchi Pages </p>
+        <p className={styles.subTitle}> Welcome to Gimchi Pages </p>
         <p> 현재 사이트 구성 중입니다.</p>
-        <p className={styles.h3Text}> 자소 분리 체험 하기 </p>
+        <p className={styles.subTitle}> 자소 분리 체험 하기 </p>
         <p> 문장을 입력해 보세요.</p>
       </div>
     )
