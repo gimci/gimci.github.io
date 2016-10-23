@@ -2,11 +2,18 @@
 import React from 'react'
 require('es6-promise').polyfill();
 require('whatwg-fetch')
+import { Provider } from 'react-redux'
 
 /* Internal Dependencies */
 require('../../style/normalize.css')
 
 import styles from './App.scss'
+import createStore from '../../redux/main'
+import Header from '../../components/Header'
+import Intro from '../../components/Intro'
+import Gimci from '../../components/Gimci'
+
+const store = createStore()
 
 class App extends React.Component {
 
@@ -19,9 +26,13 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className={styles.wrapper}>
-        {this.props.children}
-      </div>
+      <Provider store={store}>
+        <div className={styles.wrapper}>
+          <Header/>
+          <Intro/>
+          <Gimci/>
+        </div>
+      </Provider>
     )
   }
 
