@@ -21,7 +21,9 @@ class Home extends React.Component {
   render() {
     return (
       <div className={styles.wrapper}>
-        header
+        <background className={styles.headerBackground}>
+            <h3 className={styles.titleFont}>Gimci Page</h3>
+        </background>
       </div>
     )
   }
