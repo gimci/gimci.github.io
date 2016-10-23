@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 
 /* Internal Dependencies */
 import styles from './Masthead.scss'
-import * as FooActionCreator from '../../actionCreators/FooActionCreator'
+import * as FooActionCreator from '../../actionCreators/GimciActionCreator'
 
 class Masthead extends React.Component {
 

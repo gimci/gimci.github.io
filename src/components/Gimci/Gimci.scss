@@ -1,18 +1,7 @@
 .wrapper {
   border: 1px solid green;
-  display: flex;
-  flex-direction: row;
 
-  > div {
-
+  .convertBtn {
+    background-color: yellow;
   }
-
-  .leftBar {
-
-  }
-
-  .mainPanel {
-    width: calc(100% - 220px);
-  }
-
 }
