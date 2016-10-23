@@ -3,11 +3,15 @@ import { connect } from 'react-redux'
 
 /**/
 import styles from './Gimci.scss'
+import * as GimciActionCreator from '../../actionCreators/GimciActionCreator'
+import * as Dom from '../../utils/DomUtils'
 
-class Home extends React.Component {
+class Gimci extends React.Component {
 
   constructor() {
     super()
+    this._refs = {}
+    this.handleClick = this.handleClick.bind(this)
   }
 
   componentWillMount() {
@@ -18,10 +22,29 @@ class Home extends React.Component {
 
   }
 
+  componentWillReceivedProps(props) {
+    // console.log(2, props)
+  }
+
+  handleClick(event) {
+    const val = this._refs.input.value
+    this.props.dispatch(GimciActionCreator.convert(val))
+  }
+
   render() {
     return (
       <div className={styles.wrapper}>
-        header
+        <div>
+          <input
+            ref={elem => Dom.setRefToNode(this._refs, 'input', elem)}
+            type="text"/>
+          <button
+            className={styles.convertBtn}
+            onClick={this.handleClick}>convert</button>
+        </div>
+        <span>
+          {this.props.converted}
+        </span>
       </div>
     )
   }
@@ -29,11 +52,12 @@ class Home extends React.Component {
 
 const mapStateToProps = (state/*, props*/) => {
   return {
+    converted: state.gimci.converted,
     reduxState: state
   }
 }
 
-const ConnectedHome = connect(mapStateToProps)(Home)
+const ConnectedGimci = connect(mapStateToProps)(Gimci)
 
-export default ConnectedHome
+export default ConnectedGimci
 
