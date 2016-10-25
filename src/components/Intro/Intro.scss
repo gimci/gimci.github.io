@@ -1,14 +1,10 @@
 .wrapper {
   border: 1px solid green;
-  display: flex;
-  flex-direction: row;
 
-  > div {
-
-  }
-
-  .leftBar {
-
+  .subTitle{
+    display: block;
+    left: 5px;
+    color: #080;
   }
 
   .mainPanel {
