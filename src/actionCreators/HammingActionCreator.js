@@ -5,7 +5,7 @@ import Hamming from '../modules/Hamming'
 
 export function convert(text1, text2) {
     return {
-        types: ['CONVERT_REQUEST', 'CONVERT_SUCCESS', 'GET_TIME_FAILURE'],
+        types: ['HAMMING_REQUEST', 'HAMMING_SUCCESS', 'HAMMING_FAILURE'],
         promise: () => {
 
             return new Promise((resolve, reject) => {

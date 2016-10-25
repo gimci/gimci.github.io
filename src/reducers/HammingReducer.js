@@ -5,17 +5,17 @@ export default function _hamming(state = {}, action) {
     console.log('_hamming', state, action);
 
     switch (action.type) {
-        case 'CONVERT_REQUEST':
+        case 'HAMMING_REQUEST':
             return {
                 ...state
             }
-        case 'CONVERT_SUCCESS':
+        case 'HAMMING_SUCCESS':
             console.log(2, action)
             return {
                 ...state,
                 converted: action.result
             }
-        case 'CONVERT_FAILURE':
+        case 'HAMMING_FAILURE':
             return {
                 ...state,
             }

@@ -30,9 +30,10 @@ class Hamming extends React.Component {
     }
 
     handleClick1(event1) {
-        const val1 = this._refs.inputFirst.value
-        const val2 = this._refs.inputSecond.value
-        this.props.dispatch(HammingActionCreator.convert(val1, val2))
+      console.log(11)
+      const val1 = this._refs.inputFirst.value
+      const val2 = this._refs.inputSecond.value
+      this.props.dispatch(HammingActionCreator.convert(val1, val2))
     }
 
     render() {
