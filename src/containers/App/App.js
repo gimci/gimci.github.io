@@ -12,6 +12,7 @@ import createStore from '../../redux/main'
 import Header from '../../components/Header'
 import Intro from '../../components/Intro'
 import Gimci from '../../components/Gimci'
+import Hamming from '../../components/Hamming'
 
 const store = createStore()
 
@@ -31,6 +32,7 @@ class App extends React.Component {
           <Header/>
           <Intro/>
           <Gimci/>
+          <Hamming/>
         </div>
       </Provider>
     )
