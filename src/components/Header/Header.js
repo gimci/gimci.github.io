@@ -1,5 +1,5 @@
 import React from 'react'
-import { connect } from 'react-redux'
+import {connect} from 'react-redux'
 
 /**/
 import styles from './Header.scss'
@@ -21,10 +21,10 @@ class Home extends React.Component {
   render() {
     return (
       <div className={styles.wrapper}>
-        <background className={styles.headerBackground}>
-            <h3 className={styles.titleFont}>Gimci Page</h3>
-        </background>
+        <p className={styles.headerBackground}> Gimci Page </p>
       </div>
+
+
     )
   }
 }

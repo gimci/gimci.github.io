@@ -1,6 +1,8 @@
 /**/
 import GimciReducer from './GimciReducer'
+import HammingReducer from './HammingReducer'
 
 export default {
-  gimci: GimciReducer
+  gimci: GimciReducer,
+  hamming: HammingReducer
 }
