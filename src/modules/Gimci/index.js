@@ -7,7 +7,7 @@ class Gimci {
   }
 
   separateIntoLetters(text) {
-    return separator(text)
+    return separator(text)   
   }
   
 }

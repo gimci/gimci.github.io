@@ -109,6 +109,7 @@ export default function separator(text) {
 
       medial = MEDIAL[parseInt(l2)].ro
       if (initial === '') {
+        // make the first char uppercase when initial is empty,
         medial = medial.charAt(0).toUpperCase() + medial.slice(1);
         // console.log(medial)
       }
