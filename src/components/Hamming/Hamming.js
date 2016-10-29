@@ -14,23 +14,10 @@ class Hamming extends React.Component {
     constructor() {
         super()
         this._refs = {}
-        this.handleClick1 = this.handleClick1.bind(this)
+        this.handleClick = this.handleClick.bind(this)
     }
 
-    componentWillMount() {
-
-    }
-
-    componentDidMount() {
-
-    }
-
-    componentWillReceivedProps(props) {
-        // console.log(2, props)
-    }
-
-    handleClick1(event1) {
-      console.log(11)
+    handleClick(event) {
       const val1 = this._refs.inputFirst.value
       const val2 = this._refs.inputSecond.value
       this.props.dispatch(HammingActionCreator.convert(val1, val2))
@@ -48,7 +35,7 @@ class Hamming extends React.Component {
                         type="text2"/>
                     <button
                         className={styles.convertBtn}
-                        onClick={this.handleClick1}>convert</button>
+                        onClick={this.handleClick}>convert</button>
                 </div>
                 <span>
           {this.props.converted}
