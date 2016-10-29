@@ -1,9 +1,10 @@
 /**
  * Created by nariyoon on 2016. 10. 25..
  */
-import Hamming from '../modules/hamming'
+import Hamming from '../modules/HammingDistCalculator'
 
-export function convert(text1, text2) {
+
+export function calculate(text1, text2) {
     return {
         types: ['HAMMING_REQUEST', 'HAMMING_SUCCESS', 'HAMMING_FAILURE'],
         promise: () => {
