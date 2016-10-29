@@ -1,7 +1,7 @@
 {
-  "name": "Gimci",
+  "name": "Main",
   "version": "0.0.0",
   "private": true,
-  "main": "./Gimci.js"
+  "main": "./Main.js"
 }
 

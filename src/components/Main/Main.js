@@ -2,11 +2,11 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 /**/
-import styles from './Gimci.scss'
-import * as GimciActionCreator from '../../actionCreators/GimciActionCreator'
+import styles from './Main.scss'
+import * as GimciActionCreator from '../../actions/GimciActionCreator'
 import * as Dom from '../../utils/DomUtils'
 
-class Gimci extends React.Component {
+class Content extends React.Component {
 
   constructor() {
     super()
@@ -22,13 +22,10 @@ class Gimci extends React.Component {
 
   }
 
-  componentWillReceivedProps(props) {
-    // console.log(2, props)
-  }
-
   handleClick(event) {
     const val = this._refs.input.value
     this.props.dispatch(GimciActionCreator.convert(val))
+    // this.props.dispatch(GimciActionCreator.romanize(val))
   }
 
   render() {
@@ -57,7 +54,7 @@ const mapStateToProps = (state/*, props*/) => {
   }
 }
 
-const ConnectedGimci = connect(mapStateToProps)(Gimci)
+const ConnectedContent = connect(mapStateToProps)(Content)
 
-export default ConnectedGimci
+export default ConnectedContent
 

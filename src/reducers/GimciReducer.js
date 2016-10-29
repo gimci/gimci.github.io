@@ -7,7 +7,6 @@ export default function _gimci(state = {}, action) {
         ...state
       }
     case 'CONVERT_SUCCESS':
-      console.log(2, action)
       return {
         ...state,
         converted: action.result
