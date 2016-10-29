@@ -20,7 +20,7 @@ class Hamming extends React.Component {
   handleClick(event) {
     const val1 = this._refs.inputFirst.value
     const val2 = this._refs.inputSecond.value
-    this.props.dispatch(HammingActionCreator.convert(val1, val2))
+    this.props.dispatch(HammingActionCreator.calculate(val1, val2))
   }
 
   render() {
@@ -35,7 +35,7 @@ class Hamming extends React.Component {
             type="text2"/>
           <button
             className={styles.convertBtn}
-            onClick={this.handleClick}>convert</button>
+            onClick={this.handleClick}>Calculate</button>
         </div>
         <span>{this.props.converted}</span>
       </div>

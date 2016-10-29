@@ -3,7 +3,6 @@
  * Hangul compatibility Jamo
  */
 
-
 const INITIAL = [
   {ko: 'ㄱ', ro: 'g', uni: 0x3131},
   {ko: 'ㄲ', ro: 'gg', uni: 0x3132},
@@ -25,6 +24,7 @@ const INITIAL = [
   {ko: 'ㅍ', ro: 'p', uni: 0x314d},
   {ko: 'ㅎ', ro: 'h', uni: 0x314e}
 ]
+
 const MEDIAL = [
   {ko: 'ㅏ', ro: 'a', uni: 0x314f},
   {ko: 'ㅐ', ro: 'ai', uni: 0x3150},
@@ -48,6 +48,7 @@ const MEDIAL = [
   {ko: 'ㅢ', ro: 'yi', uni: 0x3162},
   {ko: 'ㅣ', ro: 'i', uni: 0x3163},
 ]
+
 const FINAL = [
   {ko: '', ro: '', uni: 0x0000},
   {ko: 'ㄱ', ro: 'g', uni: 0x3131},
@@ -83,10 +84,10 @@ export default function separator(text) {
 
   var chars = []
   let l1, l2, l3, initial, medial, final
-  var ret = []
+  var ret = ''
 
   for (let i = 0; i < text.length; i++) {
-    console.log('input', chars[i])
+    // console.log('input', chars[i])
     l1 = 0
     l2 = 0
     l3 = 0
@@ -105,23 +106,24 @@ export default function separator(text) {
       l3 = l3 % 28; // final
 
       initial = INITIAL[parseInt(l1)].ro
-      ret.push(initial)
+      if(initial !== '') {
+        ret = ret.concat(initial)
+      }
 
       medial = MEDIAL[parseInt(l2)].ro
-      if (initial === '') {
-        // make the first char uppercase when initial is empty,
+      if(initial === '') { // make the first char uppercase when initial is empty,
         medial = medial.charAt(0).toUpperCase() + medial.slice(1);
-        // console.log(medial)
       }
-      // console.log(2, medial[parseInt(l2)].ro)
-      ret.push(medial)
+      ret = ret.concat(medial)
 
-      if (l3 != 0x0000)
+      if(l3 != 0x0000) { // if final is not empty
         final = FINAL[parseInt(l3)].ro
-        ret.push(final);
+        ret = ret.concat(final)
+      }
+
     }
     else { // if the char is not hangyr
-      ret.push(String.fromCharCode(chars[i]));
+      ret = ret.concat(String.fromCharCode(chars[i]));
     }
   }
   return ret;
