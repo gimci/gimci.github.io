@@ -7,7 +7,7 @@ export function convert(text) {
     promise: () => {
 
       return new Promise((resolve, reject) => {
-        const converted = Gimci.separateIntoLetters(text)
+        const converted = Gimci.romanize(text)
         resolve(converted)
       })
     }

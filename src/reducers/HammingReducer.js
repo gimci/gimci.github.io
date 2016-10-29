@@ -9,7 +9,6 @@ export default function _hamming(state = {}, action) {
                 ...state
             }
         case AT.HAMMING_CALC_SUCCESS:
-            console.log(2, action)
             return {
                 ...state,
                 converted: action.result

@@ -1,4 +1,4 @@
-import separator from './separator'
+import romanize from './romanize'
 
 class Gimci {
 
@@ -6,8 +6,8 @@ class Gimci {
 
   }
 
-  separateIntoLetters(text) {
-    return separator(text)   
+  romanize(text) {
+    return romanize(text)
   }
   
 }

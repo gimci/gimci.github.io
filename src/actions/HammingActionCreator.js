@@ -12,7 +12,10 @@ export function calculate(text1, text2) {
 
       return new Promise((resolve, reject) => {
 
-        resolve(Hamming(text1, text2))
+        const converted1 = Gimci.romanize(text1)
+        const converted2 = Gimci.romanize(text2)
+
+        resolve(Hamming(converted1, converted2))
       })
     }
   }
