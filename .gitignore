@@ -1,0 +1,17 @@
+# Created by .ignore support plugin (hsz.mobi)
+
+#logs
+*.log
+
+# file
+.DS_Store
+npm-debug.log
+
+#
+node_modules/
+
+# webstorm
+.idea/
+
+# backup
+_backup/

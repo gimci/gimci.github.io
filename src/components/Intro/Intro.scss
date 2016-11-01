@@ -1,0 +1,15 @@
+.wrapper {
+  border: 1px solid green;
+
+  .subTitle{
+    display: block;
+    left: 5px;
+    color: #080;
+    font-size: 40px;
+  }
+
+  .mainPanel {
+    width: calc(100% - 220px);
+  }
+
+}
