@@ -7,6 +7,7 @@ import Header from '../../components/Header'
 import Intro from '../../components/Intro'
 import Main from '../../components/Main'
 import Hamming from '../../components/Hamming'
+import BayesCorrection from '../../components/BayesCorrection'
 
 
 class App extends React.Component {
@@ -25,6 +26,7 @@ class App extends React.Component {
         <Intro/>
         <Main/>
         <Hamming/>
+        <BayesCorrection/>
       </div>
     )
   }
