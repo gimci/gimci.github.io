@@ -1,11 +1,14 @@
 import { createStore, applyMiddleware, combineReducers } from 'redux'
 import promiseMiddleware from './promiseMiddleware'
+import thunk from 'redux-thunk'
 import reducers from '../reducers'
 
-export default function(data) {
-  var reducer = combineReducers(reducers)
-  var finalCreateStore = applyMiddleware(promiseMiddleware)(createStore)
-  var store = finalCreateStore(reducer, data)
+export default function() {
+  var combinedReducer = combineReducers(reducers)
+  var store = createStore(
+    combinedReducer,
+    applyMiddleware(thunk)
+  )
 
   return store
 }

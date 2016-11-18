@@ -1,6 +1,7 @@
 var webpack = require('webpack');
 var path = require('path');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var autoprefixer = require('autoprefixer')
 
 var BUILD_DIR = path.resolve(__dirname, '../build');
 var APP_DIR = path.resolve(__dirname, '../src');
@@ -51,12 +52,27 @@ var config = {
       },
       { test: /\.css$/, 
         loader: ExtractTextPlugin.extract("style-loader", "css-loader") 
+      },
+      {
+        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: "url-loader?limit=10000&mimetype=application/font-woff"
+      },
+      {
+        test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: "file-loader"
+      },
+      {
+        test: /\.png$/,
+        loader: 'url-loader?limit=10000&mimetype=image/png'
       }
     ]
   },
   devServer: {
-    historyApiFallback: true,
-    headers: { "Access-Control-Allow-Origin": "*" }
+    historyApiFallback: {
+      index: 'index.html'
+    },
+    headers: { "Access-Control-Allow-Origin": "*" },
+    postcss: [ autoprefixer({ browsers: ['last 2 versions'] }) ]
   }
 };
 

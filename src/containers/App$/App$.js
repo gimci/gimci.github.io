@@ -10,7 +10,7 @@ import Hamming from '../../components/Hamming'
 import BayesCorrection from '../../components/BayesCorrection'
 
 
-class App extends React.Component {
+class App$ extends React.Component {
 
   constructor() {
     super()
@@ -33,4 +33,4 @@ class App extends React.Component {
 
 }
 
-export default App
+export default App$
