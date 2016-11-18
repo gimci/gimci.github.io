@@ -5,19 +5,19 @@
 
 const INITIAL = [
   {ko: 'ㄱ', ro: 'g', uni: 0x3131},
-  {ko: 'ㄲ', ro: 'gg', uni: 0x3132},
+  {ko: 'ㄲ', ro: 'G', uni: 0x3132},
   {ko: 'ㄴ', ro: 'n', uni: 0x3134},
   {ko: 'ㄷ', ro: 'd', uni: 0x3137},
-  {ko: 'ㄸ', ro: 'dd', uni: 0x3138},
+  {ko: 'ㄸ', ro: 'D', uni: 0x3138},
   {ko: 'ㄹ', ro: 'r', uni: 0x3139},
   {ko: 'ㅁ', ro: 'm', uni: 0x3141},
   {ko: 'ㅂ', ro: 'b', uni: 0x3142},
-  {ko: 'ㅃ', ro: 'bb', uni: 0x3143},
+  {ko: 'ㅃ', ro: 'B', uni: 0x3143},
   {ko: 'ㅅ', ro: 's', uni: 0x3145},
-  {ko: 'ㅆ', ro: 'ss', uni: 0x3146},
+  {ko: 'ㅆ', ro: 'S', uni: 0x3146},
   {ko: 'ㅇ', ro: '', uni: 0x3147}, // 11th
   {ko: 'ㅈ', ro: 'j', uni: 0x3148},
-  {ko: 'ㅉ', ro: 'jj', uni: 0x3149},
+  {ko: 'ㅉ', ro: 'J', uni: 0x3149},
   {ko: 'ㅊ', ro: 'c', uni: 0x314a},
   {ko: 'ㅋ', ro: 'k', uni: 0x314b},
   {ko: 'ㅌ', ro: 't', uni: 0x314c},
@@ -52,7 +52,7 @@ const MEDIAL = [
 const FINAL = [
   {ko: '', ro: '', uni: 0x0000},
   {ko: 'ㄱ', ro: 'g', uni: 0x3131},
-  {ko: 'ㄲ', ro: 'gg', uni: 0x3132},
+  {ko: 'ㄲ', ro: 'G', uni: 0x3132},
   {ko: 'ㄱㅅ', ro: 'gs', uni: 0x3133},
   {ko: 'ㄴ', ro: 'n', uni: 0x3134},
   {ko: 'ㄴㅈ', ro: 'nj', uni: 0x3135},
@@ -70,7 +70,7 @@ const FINAL = [
   {ko: 'ㅂ', ro: 'b', uni: 0x3142},
   {ko: 'ㅂㅅ', ro: 'bs', uni: 0x3144},
   {ko: 'ㅅ', ro: 's', uni: 0x3145},
-  {ko: 'ㅆ', ro: 'ss', uni: 0x3146},
+  {ko: 'ㅆ', ro: 'S', uni: 0x3146},
   {ko: 'ㅇ', ro: 'ng', uni: 0x3147}, // note that 'IYng' is nasal here, thus 'ng' not '\phi'
   {ko: 'ㅈ', ro: 'j', uni: 0x3148},
   {ko: 'ㅊ', ro: 'c', uni: 0x314a},
