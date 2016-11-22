@@ -1,0 +1,7 @@
+{
+  "name": "GetStarted",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./GetStarted.js"
+}
+

@@ -1,0 +1,38 @@
+@import '../../styles/base.scss';
+@import '../../styles/color.scss';
+
+.wrapper {
+
+  .contentArea {
+    @include contentArea;
+
+  }
+
+  .contentHeader {
+    @include contentHeader;
+  }
+
+  .desc {
+
+  }
+
+  .inputContainer {
+    @include inputContainer;
+  }
+
+  .convertBtn {
+    @include convertBtn;
+  }
+
+  .highlight {
+    display: inline-block;
+    background-color: #f5f3f2;
+    padding: 1px;
+    border: 1px solid #d0cdcd;
+    border-radius: 3px;
+    color: #e65959;
+  }
+
+
+
+}

@@ -1,6 +1,0 @@
-{
-  "name": "BayesCorrection",
-  "version": "0.0.0",
-  "private": true,
-  "main": "./BayesCorrection.js"
-}

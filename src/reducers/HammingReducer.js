@@ -1,22 +1,18 @@
-import AT from '../constants/ActionTypes'
+import AT from '../actions/ActionTypes'
+
 
 export default function _hamming(state = {}, action) {
     console.log('_hamming', state, action);
 
+
     switch (action.type) {
-        case AT.HAMMING_CALC_REQUEST:
-            return {
-                ...state
-            }
-        case AT.HAMMING_CALC_SUCCESS:
+        case AT.CALC_DISTANCE:
+          console.log(2, action.payload)
             return {
                 ...state,
-                converted: action.result
+                distance: action.payload
             }
-        case AT.HAMMING_CALC_FAILURE:
-            return {
-                ...state,
-            }
+
         default:
             return state
     }

@@ -1,21 +1,26 @@
 {
-  "name": "smp",
+  "name": "gimci",
   "version": "1.0.0",
-  "description": "soma portal",
+  "description": "Korean Natural Language Processing JavaScript library",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --config webpack/dev.config.js --content-base ./build --colors --host 0.0.0.0 --port 6001",
     "build": "webpack -p --config webpack/prod.config.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": [
+    "Engine",
+    "WY"
+  ],
+  "license": "MIT",
   "dependencies": {
     "classnames": "^2.2.5",
     "es6-promise": "^4.0.5",
     "keymirror": "^0.1.1",
+    "prismjs": "^1.5.1",
     "react": "^15.3.1",
     "react-dom": "^15.3.1",
+    "react-prism": "^4.0.0",
     "react-redux": "^4.4.5",
     "react-router": "^2.8.1",
     "redux": "^3.6.0",
@@ -31,12 +36,14 @@
     "css-loader": "^0.25.0",
     "exports-loader": "^0.6.3",
     "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
     "imports-loader": "^0.6.5",
     "node-sass": "^3.10.0",
     "normalize.css": "^4.2.0",
     "postcss-loader": "^0.13.0",
     "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.15.1"
   }

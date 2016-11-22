@@ -1,0 +1,22 @@
+@import '../../styles/base.scss';
+@import '../../styles/color.scss';
+
+.wrapper {
+
+  .contentArea {
+    @include contentArea;
+  }
+
+  .contentHeader {
+    @include contentHeader;
+  }
+
+  .inputContainer {
+    @include inputContainer;
+  }
+
+  .convertBtn {
+    @include convertBtn;
+  }
+
+}

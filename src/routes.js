@@ -4,20 +4,21 @@ import { Router, Route, Link, browserHistory, useRouterHistory, hashHistory, Ind
 import { createHashHistory } from 'history'
 
 /* Internals */
-import App$ from './containers/App$'
+import AppContainer from './containers/AppContainer'
+
 
 /************************************************************
  * Redux
  ************************************************************/
 import { Provider } from 'react-redux'
 import { ReduxUtils } from './utils'
-const store = ReduxUtils.createStore()
+const store = ReduxUtils.store()
 
 
 export default (
-  <Provider store={store()}>
+  <Provider store={store}>
     <Router history={browserHistory}>
-      <Route path="/" component={App$}>
+      <Route path="/" component={AppContainer}>
       </Route>
     </Router>
   </Provider>
