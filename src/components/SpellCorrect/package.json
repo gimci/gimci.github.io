@@ -1,6 +1,6 @@
 {
-  "name": "BayesCorrection",
+  "name": "SpellCorrect",
   "version": "0.0.0",
   "private": true,
-  "main": "./BayesCorrection.js"
+  "main": "./SpellCorrect.js"
 }

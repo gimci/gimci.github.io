@@ -2,13 +2,12 @@
 import React from 'react'
 
 /* Internal Dependencies */
-import styles from './App$.scss'
-import Masthead_ from '../../components/Masthead'
-import Main$ from '../../containers/Main$'
-import Hamming from '../../components/Hamming'
-import BayesCorrection from '../../components/BayesCorrection'
+import styles from './AppContainer.scss'
+import Masthead from '../../components/Masthead'
+import MainContainer from '../../containers/MainContainer'
+import Intro from '../../components/Intro'
 
-class App$ extends React.Component {
+class AppContainer extends React.Component {
 
   constructor() {
     super()
@@ -20,12 +19,13 @@ class App$ extends React.Component {
   render() {
     return (
       <div className={styles.wrapper}>
-        <Masthead_/>
-
+        <Masthead/>
+        <Intro/>
+        <MainContainer/>
       </div>
     )
   }
 
 }
 
-export default App$
+export default AppContainer

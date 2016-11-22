@@ -4,33 +4,20 @@ import { connect } from 'react-redux'
 /**/
 import styles from './Intro.scss'
 
-class Home extends React.Component {
-
-  constructor() {
-    super()
-  }
-
-  componentWillMount() {
-
-  }
-
-  componentDidMount() {
-
-  }
-
-  render() {
-    return (
-      <div className={styles.wrapper}>
-        <p className={styles.subTitle}> Welcome to Gimchi Pages </p>
-          <p> 문제점 제시</p>
-          <p> 기존의 공공 지표 전사법이 통일 되어 있지 않음</p>
-          <p> 해결방법 제시</p>
-          <p> 통일된 로마자 전사법 제시ㄴ</p>
-        <p className={styles.subTitle}> 자소 분리 체험 하기 </p>
-        <p> 문장을 입력해 보세요.</p>
+let Intro = (props) => {
+  return (
+    <div className={styles.wrapper}>
+      <div className={styles.contentArea}>
+        <p className={styles.title}>ㄱㅣㅁㅊㅣ</p>
+        <p>
+          Processing Korean with the character-based metric costs not only the amount of calculation
+          but it also reaps the accuracy off. Meet the letter-based processing with the newly devised
+          Korean-Roman rule. <b>Gimci</b> is designed to boost the overall performance of Natural Language Processing
+          models of Korean, and improve understanding of the Korean writing system in a remarkably different way.
+        </p>
       </div>
-    )
-  }
+    </div>
+  )
 }
 
 const mapStateToProps = (state/*, props*/) => {
@@ -39,7 +26,7 @@ const mapStateToProps = (state/*, props*/) => {
   }
 }
 
-const ConnectedHome = connect(mapStateToProps)(Home)
+Intro = connect(mapStateToProps)(Intro)
 
-export default ConnectedHome
+export default Intro
 

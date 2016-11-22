@@ -1,28 +1,29 @@
+/* Externals */
 import React from 'react'
 import { connect } from 'react-redux'
 
-/**/
-import styles from './Motivation.scss'
+/* Internals */
+import styles from './GetStarted.scss'
+
+
+var code =
+  `npm install --save gimci`
 
 let Motivation = (props) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.contentHeader}>
-        Motivation
+        Getting Started
       </div>
       <div className={styles.desc}>
         <p>
-          Characters of <span className={styles.highlight}>Hangul</span> consist of two to three letters.
-          : Initial (초성), Medial (중성), Final (종성). Traditional models parses the text by each
-          character which has total possibilities of <span className={styles.highlight}>11172</span>. (Initial 19 * Medial 21 * Final 28)
-          Now by looking at the letters, we only have <span className={styles.highlight}>40</span>. (Standard 24 + Combined 16)
+          Gimci, as of Nov 2016, is implemented in JavaScript, with the view of making i runnable at both
+          web web browsers and native operating systems. For install, use npm with Node.js.
         </p>
-        <p className={styles.blankLine}/>
-        <p>
-          This means we have less amount of calculation which will result in shorter amount of time span.
-          Moreover, we will be able to track a relationship between each letter and may end up with
-          devisable, but not yet used combination of letters (new expressions or vocabularies) voluming up the language itself.
-        </p>
+        <p className={styles.blankLine}></p>
+        <pre>
+          <code className="language-javascript">{code}</code>
+        </pre>
       </div>
     </div>
   )

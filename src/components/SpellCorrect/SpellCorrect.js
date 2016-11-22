@@ -1,54 +1,43 @@
+/* Externals */
 import React from 'react'
 import { connect } from 'react-redux'
 
-/**/
-import styles from './BayesCorrection.scss'
-import * as BayesCorrectionCreator from '../../actions/BayesCorrectionCreator'
+/* Internals */
+import styles from './SpellCorrect.scss'
+import * as HammingActionCreator from '../../actions/HammingActionCreator'
 import * as Dom from '../../utils/DomUtils'
 
-class BayesCorrection extends React.Component {
-
-  constructor() {
-    super()
-    this._refs = {}
-    this.result = []
-    this.handleClick = this.handleClick.bind(this)
-  }
-
-  handleClick(event) {
-    const val1 = this._refs.inputFirst.value
-    this.props.dispatch(BayesCorrectionCreator.calcBayes(val1))
-  }
-
-  componentWillMount() {
-  }
-
-  componentDidMount() {
-
-  }
-
-  render() {
-    return (
-      <div className={styles.wrapper}>
-        <input
-          ref={elem1 => Dom.setRefToNode(this._refs, 'inputFirst', elem1)}
-          type="text1"/>
-        <button
-          className={styles.convertBtn}
-          onClick={this.handleClick}>Calculate</button>
-        <span>{this.props.converted}</span>
+let SpellCorrect = (props) => {
+  return (
+    <div className={styles.wrapper}>
+      <div className={styles.contentArea}>
+        <div className={styles.contentHeader}>
+          Spell Correction
+        </div>
+        <div className={styles.desc}>
+        </div>
+        <div className={styles.inputContainer}>
+          <input
+            id="correct"
+            type="text"/>
+          <button
+            className={styles.convertBtn}
+            onClick={props.handleClickCorrect}>
+            Get Distance</button>
+        </div>
+        <span>{props.corrected}</span>
       </div>
-    )
-  }
+    </div>
+  )
 }
 
 const mapStateToProps = (state/*, props*/) => {
   return {
-    converted: state.bayes.converted,
+    converted: state.hamming.converted,
   }
 }
 
-const ConnectedBayesCorrection = connect(mapStateToProps)(BayesCorrection)
+SpellCorrect = connect(mapStateToProps)(SpellCorrect)
 
-export default ConnectedBayesCorrection
+export default SpellCorrect
 

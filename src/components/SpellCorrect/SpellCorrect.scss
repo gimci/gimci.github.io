@@ -1,7 +1,22 @@
-.wrapper {
-  border: 1px solid green;
+@import '../../styles/base.scss';
+@import '../../styles/color.scss';
 
-  .convertBtn {
-    background-color: yellow;
+.wrapper {
+
+  .contentArea {
+    @include contentArea;
+
   }
+  .convertBtn {
+    @include convertBtn;
+  }
+
+  .contentHeader {
+    @include contentHeader;
+  }
+
+  .inputContainer {
+    @include inputContainer;
+  }
+
 }

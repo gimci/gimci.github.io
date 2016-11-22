@@ -1,46 +1,46 @@
-/**
- * Created by nariyoon on 2016. 10. 25..
- */
+/* Externals */
 import React from 'react'
 import { connect } from 'react-redux'
 
-/**/
-import styles from './Hamming.scss'
+/* Internals */
+import styles from './DistCalculate.scss'
 import * as HammingActionCreator from '../../actions/HammingActionCreator'
 import * as Dom from '../../utils/DomUtils'
 
-class Hamming extends React.Component {
+let DistCalculate = (props) => {
+  return (
+    <div className={styles.wrapper}>
+      <div className={styles.contentArea}>
+        <div className={styles.contentHeader}>
+          Distance Calculator
+        </div>
+        <div className={styles.desc}>
+          <p>Calcalate distance between two words.</p>
+          <p>Took a reference with the following metrics.</p>
+          <p>- Levenshtein Distance</p>
+          <p>- Hamming Distance</p>
 
-  constructor() {
-    super()
-    this._refs = {}
-    this.handleClick = this.handleClick.bind(this)
-  }
-
-  handleClick(event) {
-    const val1 = this._refs.inputFirst.value
-    const val2 = this._refs.inputSecond.value
-    this.props.dispatch(HammingActionCreator.calculate(val1, val2))
-  }
-
-  render() {
-    return (
-      <div className={styles.wrapper}>
-        <div>
+          `e.g) HammingDist(안녕,정녕) -> 1`
+          `HammingDist(Annieng,jengnieng) -> 3`
+          >
+          로마자 전사를 통한 세분화된 distance측정으로 단어 사이의 연관성을 정밀하게 측정 할 수 있다.
+        </div>
+        <div className={styles.inputContainer}>
           <input
-            ref={elem1 => Dom.setRefToNode(this._refs, 'inputFirst', elem1)}
-            type="text1"/>
+            id="dist1"
+            type="text"/>
           <input
-            ref={elem2 => Dom.setRefToNode(this._refs, 'inputSecond', elem2)}
-            type="text2"/>
+            id="dist2"
+            type="text"/>
           <button
             className={styles.convertBtn}
-            onClick={this.handleClick}>Calculate</button>
+            onClick={props.handleClickDist}>
+            Get Distance</button>
         </div>
-        <span>{this.props.converted}</span>
+        <span>{props.distance}</span>
       </div>
-    )
-  }
+    </div>
+  )
 }
 
 const mapStateToProps = (state/*, props*/) => {
@@ -49,7 +49,7 @@ const mapStateToProps = (state/*, props*/) => {
   }
 }
 
-const ConnectedHamming = connect(mapStateToProps)(Hamming)
+DistCalculate = connect(mapStateToProps)(DistCalculate)
 
-export default ConnectedHamming
+export default DistCalculate
 

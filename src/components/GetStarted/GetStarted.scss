@@ -4,12 +4,12 @@
 .wrapper {
 
   .contentArea {
-    @extend %contentArea;
+    @include contentArea;
 
   }
 
   .contentHeader {
-    @extend %contentHeader;
+    @include contentHeader;
   }
 
   .desc {
@@ -17,11 +17,11 @@
   }
 
   .highlight {
-    @extend %highlight;
+    @include highlight;
   }
 
   .blankLine {
-    @extend %blankLine;
+    @include blankLine;
   }
 
 

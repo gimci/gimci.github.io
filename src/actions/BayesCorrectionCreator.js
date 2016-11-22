@@ -1,20 +1,15 @@
 
 import Bayes from '../modules/BayesCorrectionCalculator'
 import Gimci from '../modules/Gimci'
-import AT from '../constants/ActionTypes'
+import AT from './ActionTypes'
+import createAction from './createAction'
 
-export function calcBayes(text) {
-  return {
-    types: [AT.BAYES_CALC_REQUEST, AT.BAYES_CALC_SUCCESS, AT.BAYES_CALC_FAILURE],
-    promise: () => {
 
-      return new Promise((resolve, reject) => {
+export default {
+  calcBayes: (arg) => {
 
-        const converted1 = Gimci.romanize(text)
+    const converted1 = Gimci.romanize(arg)
 
-        var thatBayes = Bayes()
-        resolve(thatBayes.edits1([converted1]))
-      })
-    }
+    return createAction(AT.CORRECT, thatBayes.edits1([converted1]))
   }
 }

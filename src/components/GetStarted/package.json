@@ -1,7 +1,7 @@
 {
-  "name": "Motivation",
+  "name": "GetStarted",
   "version": "0.0.0",
   "private": true,
-  "main": "./Motivation.js"
+  "main": "./GetStarted.js"
 }
 

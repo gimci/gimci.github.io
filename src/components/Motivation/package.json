@@ -1,7 +1,7 @@
 {
-  "name": "Romanize",
+  "name": "Motivation",
   "version": "0.0.0",
   "private": true,
-  "main": "./Romanize.js"
+  "main": "./Motivation.js"
 }
 

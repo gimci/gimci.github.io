@@ -6,10 +6,23 @@ import {connect} from 'react-redux'
 import styles from './Masthead.scss'
 
 
-const Masthead = (props) => {
+let Masthead = (props) => {
   return (
     <div className={styles.wrapper}>
-      <p className={styles.headerBackground}> Gimci Page </p>
+      <div className={styles.contentArea}>
+        <span className={styles.logo}>
+          Gimci
+        </span>
+        <span className={styles.desc}>
+          Korean natural language library with a new metric of processing
+        </span>
+        <span className={styles.linkBtn}>
+          <a href="https://github.com/gimci/gimci.github.io">
+            <i className="fa fa-github" aria-hidden="true"/>
+          </a>
+        </span>
+      </div>
+
     </div>
   )
 }
@@ -20,7 +33,7 @@ const mapStateToProps = (state/*, props*/) => {
   }
 }
 
-const Masthead = connect(mapStateToProps)(Masthead)
+Masthead = connect(mapStateToProps)(Masthead)
 
 export default Masthead
 

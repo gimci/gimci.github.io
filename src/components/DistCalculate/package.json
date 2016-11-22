@@ -1,6 +1,6 @@
 {
-  "name": "Hamming",
+  "name": "DistCalculate",
   "version": "0.0.0",
   "private": true,
-  "main": "./Hamming.js"
+  "main": "./DistCalculate.js"
 }

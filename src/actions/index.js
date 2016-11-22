@@ -1,10 +1,10 @@
-import lectureActions from './LectureActionCreator'
-import userActions from './UserActionCreator'
-import assignmentActions from './AssignmentActionCreator'
+import GimciActions from './GimciActionCreator'
+import DistActions from './HammingActionCreator'
+import CorrectActions from './BayesCorrectionCreator'
 
 module.exports = {
-  userActions,
-  lectureActions,
-  assignmentActions
+  GimciActions,
+  DistActions,
+  CorrectActions
 }
 

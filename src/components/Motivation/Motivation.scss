@@ -4,33 +4,24 @@
 .wrapper {
 
   .contentArea {
-    @extend %contentArea;
+    @include contentArea;
 
   }
 
   .contentHeader {
-    @extend %contentHeader;
+    @include contentHeader;
   }
 
   .desc {
 
   }
 
-  .inputContainer {
-    @extend %inputContainer;
-  }
-
-  .convertBtn {
-    @extend %convertBtn;
-  }
-
   .highlight {
-    display: inline-block;
-    background-color: #f5f3f2;
-    padding: 1px;
-    border: 1px solid #d0cdcd;
-    border-radius: 3px;
-    color: #e65959;
+    @include highlight;
+  }
+
+  .blankLine {
+    @include blankLine;
   }
 
 

@@ -15,5 +15,7 @@ export default function (text1, text2) {
     }
   }
 
+  console.log(text1, text2, diff)
+
   return diff;
 }

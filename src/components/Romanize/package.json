@@ -1,7 +1,7 @@
 {
-  "name": "Main$",
+  "name": "Romanize",
   "version": "0.0.0",
   "private": true,
-  "main": "./Main$.js"
+  "main": "./Romanize.js"
 }
 

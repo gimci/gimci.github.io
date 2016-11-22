@@ -1,7 +1,28 @@
+@import '../../styles/base.scss';
+@import '../../styles/color.scss';
+
 .wrapper {
-  border: 1px solid green;
+
+  color: $darkGray;
+  line-height: 1.5;
+
+  .contentArea {
+    padding: 50px 0;
+    width: 800px;
+    margin: 0 auto;
+
+    > div {
+      margin-bottom: 50px;
+    }
+  }
+
+  .subtitle {
+    @include subtitle;
+  }
 
   .convertBtn {
     background-color: yellow;
   }
+
+
 }
