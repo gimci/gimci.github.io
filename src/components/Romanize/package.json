@@ -1,7 +1,7 @@
 {
-  "name": "Main",
+  "name": "Main$",
   "version": "0.0.0",
   "private": true,
-  "main": "./Main.js"
+  "main": "./Main$.js"
 }
 

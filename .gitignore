@@ -15,3 +15,6 @@ node_modules/
 
 # backup
 _backup/
+
+# build
+build/

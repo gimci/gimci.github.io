@@ -1,6 +1,7 @@
 {
-  "name": "Masthead",
+  "name": "Header",
   "version": "0.0.0",
   "private": true,
-  "main": "./Masthead.jsx"
+  "main": "./Header.js"
 }
+

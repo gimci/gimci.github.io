@@ -1,0 +1,37 @@
+@import '../../styles/base.scss';
+@import '../../styles/color.scss';
+
+.wrapper {
+
+  .contentArea {
+    @extend %contentArea;
+
+  }
+
+  .contentHeader {
+    @extend %contentHeader;
+  }
+
+  .desc {
+
+  }
+
+  .inputContainer {
+    @extend %inputContainer;
+  }
+
+  .convertBtn {
+    @extend %convertBtn;
+  }
+
+  .highlight {
+    display: inline-block;
+    background-color: #f5f3f2;
+    padding: 1px;
+    border: 1px solid #d0cdcd;
+    border-radius: 3px;
+    color: #e65959;
+  }
+
+
+}

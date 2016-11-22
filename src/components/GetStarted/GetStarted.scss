@@ -1,0 +1,28 @@
+@import '../../styles/base.scss';
+@import '../../styles/color.scss';
+
+.wrapper {
+
+  .contentArea {
+    @extend %contentArea;
+
+  }
+
+  .contentHeader {
+    @extend %contentHeader;
+  }
+
+  .desc {
+
+  }
+
+  .highlight {
+    @extend %highlight;
+  }
+
+  .blankLine {
+    @extend %blankLine;
+  }
+
+
+}
