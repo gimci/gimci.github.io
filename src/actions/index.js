@@ -1,10 +1,5 @@
-import GimciActions from './GimciActionCreator'
-import DistActions from './HammingActionCreator'
-import CorrectActions from './BayesCorrectionCreator'
+import gimciActions from './gimciActionCreator'
 
-module.exports = {
-  GimciActions,
-  DistActions,
-  CorrectActions
+export {
+  gimciActions
 }
-

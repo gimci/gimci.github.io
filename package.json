@@ -1,12 +1,12 @@
 {
-  "name": "gimci",
+  "name": "gimci-page",
   "version": "1.0.0",
   "description": "Korean Natural Language Processing JavaScript library",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --config webpack/dev.config.js --content-base ./build --colors --host 0.0.0.0 --port 6001",
-    "build": "webpack -p --config webpack/prod.config.js"
+    "build": "set NODE_ENV=web&& webpack -p --config webpack/prod.config.js"
   },
   "author": [
     "Engine",
@@ -16,6 +16,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "es6-promise": "^4.0.5",
+    "gimci": "^1.1.1",
     "keymirror": "^0.1.1",
     "prismjs": "^1.5.1",
     "react": "^15.3.1",
@@ -38,6 +39,7 @@
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
     "imports-loader": "^0.6.5",
+    "json-loader": "^0.5.4",
     "node-sass": "^3.10.0",
     "normalize.css": "^4.2.0",
     "postcss-loader": "^0.13.0",

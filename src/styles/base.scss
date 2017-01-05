@@ -23,7 +23,7 @@
 @mixin contentHeader {
   font-weight: bold;
   color: $darkerGray;
-  font-size: 18px;
+  font-size: 22px;
   margin: 10px 0;
 }
 
@@ -41,7 +41,7 @@
 
 @mixin highlight {
   display: inline-block;
-  background-color: #f5f3f2;
+  background-color: #fffeea;
   padding: 0 3px;
   border: 1px solid #d0cdcd;
   border-radius: 3px;

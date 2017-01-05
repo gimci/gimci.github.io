@@ -1,0 +1,6 @@
+{
+  "name": "Romanization",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./Romanization.js"
+}

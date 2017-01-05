@@ -4,7 +4,8 @@ import { Router, Route, Link, browserHistory, useRouterHistory, hashHistory, Ind
 import { createHashHistory } from 'history'
 
 /* Internals */
-import AppContainer from './containers/AppContainer'
+import AppContainer from './components/AppContainer'
+import DocsContainer from './components/DocsContainer'
 
 
 /************************************************************
@@ -19,6 +20,7 @@ export default (
   <Provider store={store}>
     <Router history={browserHistory}>
       <Route path="/" component={AppContainer}>
+        <Route path="docs" component={DocsContainer}/>
       </Route>
     </Router>
   </Provider>

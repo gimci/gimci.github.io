@@ -1,0 +1,22 @@
+@import '../../styles/base.scss';
+@import '../../styles/color.scss';
+
+.wrapper {
+  padding: 50px 0 0 0;
+
+  .contentArea {
+    width: 800px;
+    margin: 0 auto;
+    line-height: 1.4;
+    font-size: 18px;
+  }
+
+  .title {
+    font-size: 46px;
+    font-weight: bold;
+  }
+
+  .blankLine {
+    @include blankLine;
+  }
+}

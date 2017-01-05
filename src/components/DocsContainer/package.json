@@ -1,0 +1,6 @@
+{
+  "name": "DocsContainer",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./DocsContainer.js"
+}

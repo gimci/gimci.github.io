@@ -1,8 +1,7 @@
 @import '../../styles/color.scss';
 
 .wrapper {
-
-  background-color: $gray;
+  background-color: #ebecec;
   height: 60px;
 
   .contentArea {
@@ -10,25 +9,25 @@
     width: 800px;
     margin: 0 auto;
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    color: white;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.25);
     font-weight: bold;
   }
 
-  .logo {
-    font-size: 28px;
-    color: $lightRed;
-    width: 160px;
+  .leftBtnGroup {
+    .textLogo {
+      cursor: pointer;
+    }
   }
 
-  .desc {
-    color: $darkPink;
+  .rightBtnGroup {
+    display: flex;
+    align-items: center;
+    > span {
+      margin-left: 15px;
+      cursor: pointer;
+    }
   }
-
-  .linkBtn {
-    margin-left: auto;
-    color: $lightRed;
-    font-weight: normal;
-    font-size: 28px;
-  }
-
 }

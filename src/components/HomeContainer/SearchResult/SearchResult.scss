@@ -1,0 +1,28 @@
+@import '../../../styles/base.scss';
+@import '../../../styles/color.scss';
+
+.wrapper {
+  margin-top: 50px;
+  min-height: 200px;
+  background-color: #2b2628;
+  padding: 40px;
+
+  .content {
+    width: 600px;
+    margin: 0 auto;
+    color: white;
+  }
+
+  .title {
+    margin-bottom: 10px;
+    .query {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .romanized {
+      margin-left: 10px;
+      font-style: italic;
+    }
+  }
+
+}

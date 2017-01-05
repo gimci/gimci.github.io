@@ -1,10 +1,6 @@
 /**/
-import GimciReducer from './GimciReducer'
-import HammingReducer from './HammingReducer'
-import BayesReducer from './BayesReducer'
+import gimciReducer from './gimciReducer'
 
-export default {
-  gimci: GimciReducer,
-  hamming: HammingReducer,
-  bayes: BayesReducer
+export {
+  gimciReducer
 }

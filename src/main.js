@@ -9,12 +9,12 @@ import { render } from 'react-dom'
 /* Internal Dependencies */
 import routes from './routes'
 
-
 /****************************************************
  * External Libraries
  ****************************************************/
 require('es6-promise').polyfill();
 require('whatwg-fetch')
+
 
 /****************************************************
  * Global Styles
@@ -26,14 +26,11 @@ require('./styles/font-awesome/css/font-awesome.min.css')
 require('./styles/prism/prism.css')
 
 
-
 /****************************************************
  * Render via React
  ****************************************************/
 
 render(
-  routes, 
+  routes,
   document.getElementById('main')
 )
-
-                

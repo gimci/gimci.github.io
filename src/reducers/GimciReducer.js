@@ -9,6 +9,18 @@ export default function _gimci(state = {}, action) {
         converted: action.payload
       }
 
+    case 'SEARCH':
+        return {
+          ...state,
+          searchResult: action.payload
+        }
+
+    case 'CLEAR':
+      return {
+        ...state,
+        searchResult: action.payload
+      }
+
     default:
       return state
   }
