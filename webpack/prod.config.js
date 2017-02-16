@@ -1,13 +1,18 @@
 var webpack = require('webpack')
 var autoprefixer = require('autoprefixer')
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var path = require('path')
+
+var BUILD_PATH = path.resolve(__dirname, '../build');
+var APP_PATH = path.resolve(__dirname, '../src');
 
 module.exports = {
   entry: {
-    app: './src/main.js'
+    app: APP_PATH + '/main.js'
   },
   output: {
-    path: './build',
+    path: BUILD_PATH,
     filename: "bundle.js"
   },
   plugins: [
@@ -15,7 +20,12 @@ module.exports = {
     new webpack.NoErrorsPlugin(),
     new webpack.optimize.UglifyJsPlugin({minimize: true}),
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': '"web"'
+      'process.env.NODE_ENV': 'production'
+    })
+    ,new HtmlWebpackPlugin({
+      hash: true,
+      filename: 'index.html',
+      template: path.resolve(__dirname, '../src/index.html')
     })
   ],
   resolve: {
@@ -63,10 +73,10 @@ module.exports = {
         test: /\.(png|jpg)$/,
         loader: 'url-loader?limit=8192'
       },
-      {
-        test: /\.html$/,
-        loader: "file?name=[path][name].[ext]&context=./src"
-      },
+      // {
+      //   test: /\.html$/,
+      //   loader: "file?name=[path][name].[ext]&context=./src"
+      // },
       {
         test: /\.json$/,
         loader: 'json-loader'

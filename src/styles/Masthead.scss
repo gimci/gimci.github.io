@@ -1,0 +1,14 @@
+@import 'color.scss';
+
+:global {
+
+  #Masthead {
+    background-color: $orange;
+    .MenuBar {
+      height: 55px;
+
+    }
+  }
+
+}
+

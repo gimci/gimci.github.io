@@ -1,0 +1,24 @@
+@import 'color.scss';
+
+:global {
+
+  #TopBanner {
+    height: 400px;
+    background-color: $whitish;
+
+    .LogoRow {
+      p {
+        font-family: monospace;
+        display: inline-block;
+        text-align: center;
+        width: 40px;
+      }
+    }
+
+    .ButtonRow {
+
+    }
+  }
+
+}
+

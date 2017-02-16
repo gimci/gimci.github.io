@@ -1,0 +1,16 @@
+@import 'color.scss';
+
+:global {
+
+  #Footer {
+    height: 60px;
+    background-color: $whiteGray;
+    > ul {
+      > li {
+
+      }
+    }
+  }
+
+}
+
