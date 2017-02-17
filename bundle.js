@@ -29105,9 +29105,9 @@
 	  return obj && obj.__esModule ? obj : { default: obj };
 	}
 	
-	// const HOST = 'http://52.79.132.50:3000'
 	// import { search, convertHangyrToRoman } from 'gimci'
-	var HOST = 'http://localhost:3000';
+	var HOST = 'http://52.79.132.50:3000';
+	// const HOST = 'http://localhost:3000'
 	
 	exports.default = {
 	
