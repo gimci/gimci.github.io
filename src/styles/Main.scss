@@ -3,15 +3,44 @@
 :global {
 
   #Main {
+    min-height: 700px;
     padding: 20px 0;
+    line-height: 1.5;
 
     .topic {
+      margin-bottom: 20px;
       .head {
         font-weight: bold;
-        padding: 15px 0;
+        padding: 15px 0 0 0;
       }
       .content {
+        > p {
+          margin: 3px 0 10px 0;
+        }
+      }
+    }
+  }
 
+  #bagsynghienRule {
+    background-color: #f5f2f1;
+    padding: 15px 10px;
+    margin-top: 20px;
+    p {
+      margin-bottom: 20px;
+    }
+    .pair {
+      text-align: center;
+      display: inline-block;
+      margin-right: 5px;
+
+      .ha {
+        display: inline-block;
+        width: 30px;
+        font-weight: bold;
+      }
+      .ro {
+        display: inline-block;
+        width: 30px;
       }
     }
   }

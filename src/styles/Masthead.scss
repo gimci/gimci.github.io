@@ -4,10 +4,26 @@
 
   #Masthead {
     background-color: $orange;
-    .MenuBar {
-      height: 55px;
+    font-weight: bold;
+    color: $whitish;
 
+    .wrapper {
+      height: 55px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .menubarLeft {
+        font-size: 28px;
+      }
+      .menubarRight {
+        font-size: 17px;
+        > li:not(:last-child) {
+          margin-right: 15px;
+        }
+      }
     }
+
   }
 
 }

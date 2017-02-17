@@ -1,1 +1,189 @@
-a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}table{border-collapse:collapse;border-spacing:0}*{box-sizing:border-box}html{overflow:hidden}body,html{height:100%}body{overflow:auto;font-family:Avenir Next,Avenir,Helvetica Neue,Helvetica,Arial,sans-serif}li{display:inline-block}button{border:none;background-color:transparent;padding:0;margin:0;font-size:16px}button:focus{outline:none}#Masthead{background-color:#df6022}#Masthead .MenuBar{height:55px}#TopBanner{height:400px;background-color:#f9f9f9}#TopBanner .LogoRow p{font-family:monospace;display:inline-block;text-align:center;width:40px}#Main{padding:20px 0}#Main .topic .head{font-weight:700;padding:15px 0}#Footer{height:60px;background-color:#eee}
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  box-sizing: border-box; }
+
+html {
+  overflow: hidden;
+  height: 100%; }
+
+body {
+  height: 100%;
+  overflow: auto;
+  font-family: "Avenir Next", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+li {
+  display: inline-block; }
+
+button {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  font-size: 16px; }
+  button:focus {
+    outline: none; }
+
+#wrap > div .wrapper {
+  width: 800px;
+  margin: 0 auto; }
+
+#Masthead {
+  background-color: #df6022;
+  font-weight: bold;
+  color: #f9f9f9; }
+  #Masthead .wrapper {
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    #Masthead .wrapper .menubarLeft {
+      font-size: 28px; }
+    #Masthead .wrapper .menubarRight {
+      font-size: 17px; }
+      #Masthead .wrapper .menubarRight > li:not(:last-child) {
+        margin-right: 15px; }
+
+#TopBanner {
+  height: 400px;
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+  font-weight: bold; }
+  #TopBanner .wrapper {
+    text-align: center; }
+  #TopBanner .LogoRow {
+    margin-bottom: 20px; }
+    #TopBanner .LogoRow p {
+      font-family: monospace;
+      display: inline-block;
+      text-align: center;
+      width: 40px;
+      font-size: 45px;
+      color: #df6022; }
+  #TopBanner .ButtonRow {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    margin: 0 auto; }
+    #TopBanner .ButtonRow > button {
+      font-weight: bold;
+      color: #df6022;
+      border: 1px solid #df6022;
+      border-radius: 4px;
+      padding: 10px 15px; }
+      #TopBanner .ButtonRow > button:hover {
+        cursor: pointer;
+        background-color: #df6022;
+        color: #f9f9f9; }
+
+#reactRoot .logo {
+  color: orange;
+  font-size: 28px;
+  margin-bottom: 20px; }
+
+#reactRoot .input {
+  padding: 10px 15px;
+  width: 350px;
+  font-size: 20px;
+  font-weight: bold;
+  color: gray; }
+  #reactRoot .input:focus {
+    outline: none; }
+
+#reactRoot .result {
+  margin-top: 15px;
+  font-weight: normal; }
+
+#Main {
+  min-height: 700px;
+  padding: 20px 0;
+  line-height: 1.5; }
+  #Main .topic {
+    margin-bottom: 20px; }
+    #Main .topic .head {
+      font-weight: bold;
+      padding: 15px 0 0 0; }
+    #Main .topic .content > p {
+      margin: 3px 0 10px 0; }
+
+#bagsynghienRule {
+  background-color: #f5f2f1;
+  padding: 15px 10px;
+  margin-top: 20px; }
+  #bagsynghienRule p {
+    margin-bottom: 20px; }
+  #bagsynghienRule .pair {
+    text-align: center;
+    display: inline-block;
+    margin-right: 5px; }
+    #bagsynghienRule .pair .ha {
+      display: inline-block;
+      width: 30px;
+      font-weight: bold; }
+    #bagsynghienRule .pair .ro {
+      display: inline-block;
+      width: 30px; }
+
+#Footer {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 14px;
+  height: 60px;
+  background-color: #eee;
+  border-top: 1px solid #ffefa6;
+  color: gray; }
+  #Footer ul > li:not(:last-child) {
+    margin-right: 5px; }
+
+/*# sourceMappingURL=style.css.map*/

@@ -8,6 +8,7 @@ var BUILD_PATH = path.resolve(__dirname, '../build');
 var APP_PATH = path.resolve(__dirname, '../src');
 
 module.exports = {
+  devtool: 'source-map',
   entry: {
     app: APP_PATH + '/main.js'
   },
@@ -18,15 +19,12 @@ module.exports = {
   plugins: [
     new ExtractTextPlugin('style.css', {allChunks: true}),
     new webpack.NoErrorsPlugin(),
-    new webpack.optimize.UglifyJsPlugin({minimize: true}),
+    // new webpack.optimize.UglifyJsPlugin({minimize: true}),
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': 'production'
-    })
-    ,new HtmlWebpackPlugin({
-      hash: true,
-      filename: 'index.html',
-      template: path.resolve(__dirname, '../src/index.html')
-    })
+      "process.env": {
+        NODE_ENV: JSON.stringify("development")
+      }
+    }),
   ],
   resolve: {
     modulesDirectories: ['node_modules']
@@ -73,14 +71,14 @@ module.exports = {
         test: /\.(png|jpg)$/,
         loader: 'url-loader?limit=8192'
       },
+      {
+        test: /\.json$/,
+        loader: 'json-loader'
+      },
       // {
       //   test: /\.html$/,
       //   loader: "file?name=[path][name].[ext]&context=./src"
       // },
-      {
-        test: /\.json$/,
-        loader: 'json-loader'
-      }
     ]
   },
   postcss: [ autoprefixer({ browsers: ['last 2 versions'] }) ]

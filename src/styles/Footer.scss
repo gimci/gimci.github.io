@@ -3,11 +3,22 @@
 :global {
 
   #Footer {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
     height: 60px;
     background-color: $whiteGray;
-    > ul {
-      > li {
+    border-top: 1px solid $whiteOrange;
+    color: gray;
 
+    .wrapper {
+
+    }
+
+    ul {
+      > li:not(:last-child) {
+        margin-right: 5px;
       }
     }
   }
