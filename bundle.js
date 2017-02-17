@@ -27404,6 +27404,32 @@
 	      }
 	    }
 	  }, {
+	    key: 'renderSearchResult',
+	    value: function renderSearchResult() {
+	      if (!this.props.searchRes) {
+	        return null;
+	      } else {
+	        var str = '';
+	        str += ' t1: ';
+	        this.props.searchRes.tier1.map(function (elem) {
+	          str += ' ' + elem;
+	        });
+	        str += ' t2: ';
+	        this.props.searchRes.tier2.map(function (elem) {
+	          str += ' ' + elem;
+	        });
+	        str += ' t3: ';
+	        this.props.searchRes.tier3.map(function (elem) {
+	          str += ' ' + elem;
+	        });
+	        str += ' t4: ';
+	        this.props.searchRes.tier4.map(function (elem) {
+	          str += ' ' + elem;
+	        });
+	        return str;
+	      }
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      var _this2 = this;
@@ -27415,7 +27441,7 @@
 	        },
 	        className: 'input',
 	        type: 'text',
-	        onKeyPress: this.handleKeyPress }), _react2.default.createElement('div', { className: 'result' }, this.props.searchRes));
+	        onKeyPress: this.handleKeyPress }), _react2.default.createElement('div', { className: 'result' }, this.renderSearchResult()));
 	    }
 	  }]);
 	
@@ -29393,8 +29419,9 @@
 	
 	    case 'SEARCH':
 	      console.log(1, action.payload);
+	      var obj = Object.assign({}, action.payload);
 	      return _extends({}, state, {
-	        searchRes: action.payload.result
+	        searchRes: obj
 	      });
 	
 	    case 'CLEAR':
@@ -29403,6 +29430,7 @@
 	      });
 	
 	    default:
+	      console.log(4);
 	      return state;
 	  }
 	}
